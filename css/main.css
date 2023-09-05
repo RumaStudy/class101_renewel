@@ -1,0 +1,228 @@
+body {
+  width: 100%;
+  height: 100%;
+}
+main {
+  width: 100%;
+  padding-top: 120px;
+}
+.course_list {
+  margin-top: 120px;
+}
+.course_list > .inner {
+  width: 1150px;
+  padding: 0;
+  margin: auto;
+}
+.course_poster {
+  display: grid;
+  row-gap: 3rem;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  justify-content: space-between;
+}
+.course_list > .inner > .course_poster > div {
+  width: 350px;
+  height: 350px;
+  padding: 0.5rem;
+  background-color: #fff;
+  cursor: pointer;
+  opacity: 0;
+}
+.course_poster > div * {
+  cursor: pointer;
+}
+.course_poster > div {
+  animation-name: course_appear;
+  animation-duration: 650ms;
+  animation-fill-mode: forwards;
+}
+@keyframes course_appear {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.img_wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.img_wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: 550ms;
+}
+.course_list > .inner > .course_poster > div:hover .img_wrap > img {
+  transform: scale(1.8);
+}
+.black_desc {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(to top, #020715, rgba(2, 7, 21, 0.3));
+}
+.black_desc > p {
+  font-size: 1.1rem;
+  color: white;
+  margin: 0 0 1rem;
+  text-align: left;
+  font-family: "GS_M";
+}
+.black_desc > span {
+  display: inline-block;
+  color: white;
+  font-family: "GS_M";
+  font-size: 0.8rem;
+  text-align: center;
+}
+.black_desc > span:nth-child(2) {
+  padding: 0 1rem 0 0;
+  border-right: 1px solid #fff;
+}
+.black_desc > span:nth-child(3) {
+  padding: 0 0 0 0.5rem;
+}
+.course_pagination {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: auto 1fr auto;
+  width: 1000px;
+  margin: 3rem auto 150px;
+}
+.prev_page_btn {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  margin-right: 2rem;
+  border: 1px solid var(--black);
+  border-radius: 18px;
+  cursor: pointer;
+}
+.prev_page_btn:hover {
+  animation-name: num_move;
+  animation-duration: 1250ms;
+  animation-iteration-count: infinite;
+}
+.next_page_btn {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  margin-left: 2rem;
+  border: 1px solid var(--black);
+  border-radius: 18px;
+  cursor: pointer;
+}
+.next_page_btn:hover {
+  animation-name: num_move;
+  animation-duration: 1850ms;
+  animation-iteration-count: infinite;
+}
+.prev_page_btn > img,
+.next_page_btn > img {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+@keyframes num_move {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #fff3a6;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+.course_numpage > .course_page_btn > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: var(--black);
+  background-color: white;
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  border: 1px solid var(--black);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 450ms;
+}
+.course_page_btn > a.clicked {
+  background-color: #fff3a6;
+}
+.course_page_btn > a:hover {
+  box-shadow: 0px 0px 7px 2px rgba(255, 243, 166, 0.5) inset;
+  border: 1px solid #fff3a6;
+  color: #fff;
+  background-color: var(--black);
+}
+.course_page_btn.current {
+  background-color: #fff3a6;
+}
+.course_numpage {
+  padding: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .course_list > .inner {
+    width: 100%;
+    padding: 0;
+  }
+  .course_list > .inner > .course_poster > div {
+    width: 30vw;
+    height: 30vw;
+    padding: 0.2rem;
+  }
+  .course_poster {
+    row-gap: 1rem;
+  }
+  .black_desc {
+    display: none;
+    padding: 0.5rem;
+  }
+  .black_desc > p {
+    font-size: 0.7rem;
+    margin: 0;
+  }
+  .black_desc > span {
+    display: none;
+  }
+  .course_pagination {
+    width: 100%;
+    margin: 1.5rem 0 7rem;
+  }
+  .prev_page_btn,
+  .next_page_btn {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+    margin: 0 3px;
+  }
+  .prev_page_btn > img,
+  .next_page_btn > img {
+    padding: 0;
+  }
+  .course_numpage {
+    padding: 0;
+  }
+  .course_numpage > .course_page_btn > a {
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    border-radius: 0.5rem;
+  }
+}

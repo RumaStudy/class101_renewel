@@ -1,0 +1,171 @@
+@charset "UTF-8";
+footer {
+  width: 100%;
+}
+.footer_upper {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+.footer_upper > .inner {
+  width: calc(100% - 400px);
+  padding: 1rem 0;
+  margin: 0 200px;
+}
+.footer_upper > .inner > ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer_upper > .inner > ul > li {
+  padding: 0.5rem;
+}
+.footer_upper > .inner > ul > li > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  /* font-size: 0.7rem; */
+}
+.footer_lower {
+  padding: 3rem 0;
+  background-color: var(--black);
+}
+.footer_lower > .inner {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+.footer_lower > .inner > .lower_left {
+  display: grid;
+  grid-template-columns: 180px auto;
+  gap: 1rem;
+  grid-template-areas:
+    "logo info"
+    "caution caution";
+}
+.footer_lower > .inner > .lower_left > .footer_logo {
+  height: 130px;
+  object-fit: contain;
+  object-position: center;
+  grid-area: logo;
+}
+.footer_lower > .inner > .lower_left > .footer_info {
+  grid-area: info;
+}
+.footer_lower > .inner > .lower_left > .footer_info > span {
+  display: block;
+  color: white;
+  font-size: 11px;
+  font-family: "GS_L";
+  margin: 0.2rem;
+}
+.footer_lower > .inner > .lower_left > .footer_caution {
+  grid-area: caution;
+  color: white;
+  font-family: "GS_L";
+}
+.footer_lower > .inner > .lower_right {
+}
+.footer_lower > .inner > .lower_right > .download_btn {
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+  margin: auto;
+}
+.footer_lower > .inner > .lower_right > .download_btn > a {
+  display: inline-block;
+  width: 200px;
+}
+.footer_lower > .inner > .lower_right > .download_btn > a > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.footer_lower > .inner > .lower_right > .subfooter {
+  padding: 1rem;
+  margin-bottom: 0.7rem;
+}
+.footer_lower > .inner > .lower_right > .subfooter > ul {
+  display: grid;
+  grid-template-areas: ". . . ." ". . . .";
+}
+.footer_lower > .inner > .lower_right > .subfooter > ul > li {
+  border-right: 1px solid #fff;
+  padding: 0.5rem;
+}
+.footer_lower > .inner > .lower_right > .subfooter > ul > .none-border {
+  border-right: none;
+}
+.footer_lower > .inner > .lower_right > .subfooter > ul > li > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 0.8rem;
+  font-family: "GS_L";
+  color: white;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .footer_upper {
+    width: 100%;
+  }
+  .footer_upper > .inner {
+    width: 100%;
+    padding: 1rem 10px;
+    margin: 0;
+  }
+  .footer_upper > .inner > ul {
+    display: grid;
+    grid-template-areas: ". . ." ". . .";
+    gap: 0.5rem 1rem;
+  }
+  .footer_upper > .inner > ul > li {
+    padding: 0;
+  }
+  .footer_upper > .inner > ul > li > a {
+    font-family: "GS_M";
+    text-align: center;
+    font-size: 0.7rem;
+  }
+  .footer_lower {
+    padding: 3rem 1rem;
+  }
+  .footer_lower > .inner {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  .footer_lower > .inner > .lower_left {
+    grid-template-columns: 1fr;
+    grid-template-areas: "logo" "info" "caution";
+  }
+  .footer_lower > .inner > .lower_left > .footer_logo {
+    height: 70px;
+    margin: auto;
+  }
+  .footer_lower > .inner > .lower_left > .footer_caution {
+    font-size: 0.7rem;
+    margin: 1rem 0 2rem;
+  }
+  .footer_lower > .inner > .lower_right > .subfooter {
+    padding: 0;
+  }
+  .footer_lower > .inner > .lower_right > .subfooter > ul {
+    grid-template-areas: ". ." ". ." ". ." ". .";
+  }
+  .footer_lower > .inner > .lower_right > .subfooter > ul > li {
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+  .footer_lower > .inner > .lower_right > .subfooter > ul > li:nth-child(even) {
+    border-right: none;
+  }
+  .footer_lower > .inner > .lower_right > .subfooter > ul > li > a {
+    font-size: 0.7rem;
+  }
+  .footer_lower > .inner > .lower_right > .download_btn {
+    width: 100%;
+  }
+  .footer_lower > .inner > .lower_right > .download_btn > a {
+    width: 150px;
+  }
+}

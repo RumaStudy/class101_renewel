@@ -1,0 +1,285 @@
+@charset "UTF-8";
+@charset "UTF-8";
+#intro {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  padding: calc(4.5rem + 120px) 300px;
+  background: url(../img/background/event_and_banner.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.intro_left {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex: 0.45;
+}
+.intro_left > * {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  overflow: hidden;
+}
+.intro_left > .intro_vid {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 400px;
+  height: 220px;
+  padding: 0rem;
+  z-index: 5;
+  overflow: hidden;
+  opacity: 0;
+  transition: 450ms;
+}
+.intro_vid::after {
+  content: "새로운 분야와 자세한 강의!";
+  color: white;
+  font-size: 1.5rem;
+  width: 300px;
+  padding: 0.3rem;
+  text-align: center;
+  background-color: rgba(2, 7, 21, 0.5);
+  display: inline-block;
+  position: absolute;
+  z-index: 10;
+  top: 95px;
+  left: 50px;
+  transition: 550ms;
+}
+.intro_vid > video {
+  width: 400px;
+  height: 300px;
+  border-radius: 30px;
+  transform: translateY(-40px);
+}
+.intro_vid > video > source {
+  width: inherit;
+  height: inherit;
+}
+.intro_left > .intro_kit {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  z-index: 10;
+  top: 230px;
+  left: 330px;
+  opacity: 0;
+  transition: 450ms;
+}
+.intro_kit::after {
+  content: "클래스에 필요한 준비물!";
+  position: absolute;
+  z-index: 15;
+  top: 90px;
+  left: 15px;
+  display: inline-block;
+  width: 270px;
+  padding: 0.3rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgba(2, 7, 21, 0.5);
+  transition: 550ms;
+}
+.intro_left > .intro_review {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  z-index: 15;
+  top: 390px;
+  left: 90px;
+  opacity: 0;
+  transition: 450ms;
+}
+.intro_review::after {
+  content: "생생한 후기와 커뮤니티!";
+  position: absolute;
+  z-index: 20;
+  left: 10px;
+  top: 90px;
+  display: inline-block;
+  width: 280px;
+  padding: 0.3rem;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgba(2, 7, 21, 0.5);
+  transition: 550ms;
+}
+.intro_right {
+  flex: 0.55;
+  width: 100%;
+  height: 100%;
+}
+.intro_right > .intro_desc {
+  width: 90%;
+  padding: 2rem 0rem 3rem;
+  margin: 10rem 8rem 2rem 4rem;
+  background-color: rgba(2, 7, 21, 0.75);
+  backdrop-filter: blur(3px);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 45px;
+  box-shadow: 10px 10px 10px 0px rgba(148, 148, 148, 0.6) inset;
+  opacity: 0;
+  transition: 450ms;
+}
+.intro_desc * {
+  color: white;
+}
+.intro_desc > h2 {
+  margin: 1rem 0rem;
+}
+.intro_desc > p {
+  font-size: 1.2rem;
+  margin: 2rem 0rem;
+}
+.intro_desc > h4 {
+  font-size: 1.3rem;
+}
+.intro_desc > * {
+  text-shadow: 0 0 2px #020715;
+}
+#intro.swiper-slide-active .intro_vid {
+  animation-name: intro_vid;
+  animation-duration: 850ms;
+  animation-delay: 450ms;
+  animation-fill-mode: forwards;
+}
+#intro.swiper-slide-active .intro_kit {
+  animation-name: intro_kit;
+  animation-duration: 850ms;
+  animation-delay: 750ms;
+  animation-fill-mode: forwards;
+}
+#intro.swiper-slide-active .intro_review {
+  animation-name: intro_view;
+  animation-duration: 850ms;
+  animation-delay: 1050ms;
+  animation-fill-mode: forwards;
+}
+#intro.swiper-slide-active .intro_right > .intro_desc {
+  animation-name: intro_desc;
+  animation-duration: 850ms;
+  animation-delay: 1350ms;
+  animation-fill-mode: forwards;
+}
+@keyframes intro_vid {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes intro_kit {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes intro_view {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes intro_desc {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 767px) {
+  #intro {
+    height: calc(100vh);
+    padding: 70px 0 0;
+    flex-direction: column;
+  }
+  .intro_left {
+    flex: unset;
+    height: 70%;
+    padding: 1rem;
+  }
+  .intro_left > .intro_vid {
+    width: 70%;
+    height: 40%;
+    margin: 5px;
+    top: 0;
+  }
+  .intro_vid::after {
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+  }
+  .intro_vid > video {
+    width: 150%;
+    height: 200%;
+    transform: translate(-15%, -25%);
+  }
+  .intro_left > .intro_kit {
+    width: 60%;
+    height: 35%;
+    top: 30%;
+    left: 40%;
+  }
+  .intro_kit::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    width: 70%;
+  }
+  .intro_left > .intro_review {
+    width: 50%;
+    height: 35%;
+    top: 55%;
+    left: 12%;
+  }
+  .intro_review::after,
+  .intro_kit::after,
+  .intro_vid::after {
+    font-size: 0.9rem;
+  }
+  .intro_review::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    width: 80%;
+  }
+  .intro_right {
+    flex: unset;
+    height: 30%;
+    padding: 1rem;
+  }
+  .intro_right > .intro_desc {
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+  }
+  .intro_desc > h2 {
+    font-size: 1.1rem;
+  }
+  .intro_desc > p {
+    font-size: 0.9rem;
+  }
+  .intro_desc > h4 {
+    font-size: 1.1rem;
+  }
+  .intro_desc > h1 {
+    font-size: 1.4rem;
+  }
+}

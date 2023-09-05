@@ -1,0 +1,347 @@
+/* header */
+header {
+  border-bottom: 0.5px solid #ffffff4d;
+  width: 100%;
+  height: 120px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  transition: 650ms;
+  background: linear-gradient(to top, rgba(2, 7, 21, 0.1), rgba(2, 7, 21, 0.5));
+  backdrop-filter: blur(2px);
+}
+header.open {
+  background: #fff;
+}
+header * {
+  color: white;
+  transition: 550ms;
+}
+header > .inner {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+/* logo */
+.logo_place {
+  margin: 1rem 0;
+}
+.logo_place > .logo {
+  width: 250px;
+  height: 100%;
+}
+.logo_place > .logo > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: url(../img/logo/Logo_shadow.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+/* GNB */
+.gnb {
+  height: 100%;
+}
+.gnb > ul {
+  display: flex;
+  justify-content: space-between;
+}
+.gnb > ul > li {
+  width: 330px;
+  height: 100%;
+}
+.gnb > ul > li > a {
+  display: inline-block;
+  padding: 1rem 4rem;
+  font-size: 24px;
+  line-height: 120px;
+}
+/* Menu */
+menu {
+  /* display: none; */
+  position: fixed;
+  top: 120px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  transition: 550ms;
+  z-index: -5;
+}
+menu.open {
+  height: 300px;
+  background-color: #fff;
+  z-index: 30;
+}
+menu > .inner {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+menu > .inner > #menu_img {
+  width: 400px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url();
+  transition: 550ms;
+}
+menu dl {
+  width: 300px;
+  padding: 1rem;
+  transition: 550ms;
+}
+dl > * {
+  width: 200px;
+  text-align: center;
+}
+dl > dt,
+dl > dd {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  transition: 550ms;
+  color: var(--black);
+}
+dl > dd {
+  color: inherit;
+  font-family: "GS_L";
+}
+dl > dd > a {
+  display: inline-block;
+  color: var(--black);
+  transition: 550ms;
+  padding: 1rem 0;
+  -webkit-text-stroke: 1px transparent;
+}
+dl > dd:hover > a {
+  color: #020715;
+  -webkit-text-stroke: 1px #fff3a6;
+}
+dl > dt {
+  font-size: 24px;
+}
+menu.open dl:hover > dt {
+  color: #fff3a6;
+}
+menu.open dl:hover > dd {
+  color: #fff;
+}
+menu.open dl:hover > dd > a {
+  color: #fff;
+}
+menu.open dl:hover > dd > button:hover {
+  color: #fff;
+  background-color: var(--black);
+  border: 1px solid #fff3a6;
+}
+menu.open dl:hover > dd > button:hover a {
+  color: white;
+}
+menu dl > dd > button {
+  padding: 1rem 2rem;
+  border: 1px solid var(--black);
+  border-radius: 15px;
+  color: var(--black);
+  background-color: #fff;
+  transition: 550ms;
+  margin-top: 3rem;
+}
+menu dl > dd > button > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: var(--black);
+}
+menu.open dl:hover {
+  background-color: var(--black);
+}
+menu.open dl:hover {
+  color: white;
+}
+/* Responsive HBG Frame */
+#hamburger {
+  display: none;
+}
+#res_menu {
+  display: none;
+  width: 0%;
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  overflow: hidden;
+}
+.upper_flex {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+#hbg_logo {
+  width: 100px;
+  height: 100%;
+}
+#closer {
+  width: 31px;
+  height: 31px;
+  margin-top: 19.5px;
+  margin-right: 4.5px;
+  cursor: pointer;
+}
+.menu_main {
+  width: 100%;
+  height: calc(100vh - 70px);
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.25) inset;
+}
+.res_menu_title {
+  width: 150px;
+  font-size: 36px;
+  margin: auto;
+}
+.categorizer {
+  width: 180px;
+  margin: 20px calc(calc(100% - 180px) / 2);
+  object-position: center;
+  object-fit: contain;
+}
+#res_menu_category > li {
+  width: 100%;
+  text-align: center;
+  font-family: "GS_L";
+}
+#res_menu_category > li > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 1.2rem;
+  padding: 1rem;
+  color: var(--black);
+}
+.cate_dots {
+  display: flex;
+  width: 100px;
+  height: 10px;
+  margin: auto;
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+.cate_dots > li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #fff6a5;
+  border: 0.5px solid var(--black);
+  border-radius: 100%;
+  box-shadow: 1px 1px 3px rgba(2, 7, 21, 0.25);
+}
+#all_class {
+  display: inline-block;
+  margin-top: 1rem;
+  width: 100%;
+}
+#all_class > button {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  font-size: 1.3rem;
+  background-color: #fff3a6;
+  border: 1px solid #020715;
+  border-radius: 1rem;
+}
+.btn_flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.3rem;
+}
+.btn_flex > a {
+  width: 45%;
+  display: inline-block;
+}
+.btn_flex > a > button {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0.5rem;
+  background-color: #fff;
+  border: 1px solid #020715;
+  border-radius: 1rem;
+}
+.res_new {
+  height: 1rem;
+  object-fit: contain;
+  object-position: center;
+}
+/* Responsive */
+@media screen and (max-width: 767px) {
+  header {
+    height: 70px;
+    background: linear-gradient(to top, rgba(2, 7, 21, 0.3), #020715 90%);
+    backdrop-filter: blur(1px);
+  }
+  header .inner {
+    padding: 0;
+  }
+  .logo_place {
+    margin: 0;
+  }
+  .logo_place > .logo {
+    width: 150px;
+  }
+  .gnb {
+    display: none;
+  }
+
+  .logo_place > .logo > a {
+    background: url(../img/logo/Logo_light.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  #hamburger {
+    display: inline-block;
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    top: 19.5px;
+    right: 19.5px;
+    background-image: url(../img/header/opener.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+  }
+  #res_menu {
+    animation-name: res_menu_closer;
+    animation-duration: 750ms;
+    animation-fill-mode: forwards;
+  }
+  @keyframes res_menu_closer {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0;
+    }
+  }
+  #res_menu.clicked {
+    display: block;
+    animation-name: res_menu_opener;
+    animation-duration: 750ms;
+    animation-fill-mode: forwards;
+  }
+  @keyframes res_menu_opener {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+}

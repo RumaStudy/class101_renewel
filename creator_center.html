@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS RESET -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <!-- Main Contents -->
+    <link rel="stylesheet" href="css/creator_changes.css" />
+    <link rel="stylesheet" href="css/res_creator_center.css" />
+    <!-- Creator Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/creator_swiper.css" />
+    <!-- Responsive Header -->
+    <link rel="stylesheet" href="css/whitebg_header.css" />
+    <!-- Footer -->
+    <link rel="stylesheet" href="css/footer_static.css" />
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="img/logo/Logo_border.png"
+      type="image/x-icon"
+    />
+    <title>클래스101+:: 세상의 모든 취미 - 크리에이터 센터</title>
+  </head>
+  <body>
+    <!-- Background Vid -->
+    <section id="upper_bg">
+      <video autoplay loop muted id="first_bg">
+        <source src="img/background/cube.mp4" />
+      </video>
+    </section>
+    <section id="main_bg">
+      <video autoplay loop muted>
+        <source src="img/loading_animation/loading_bgvid.mp4" />
+      </video>
+    </section>
+    <!-- Header -->
+    <header>
+      <div class="inner">
+        <div class="logo_place">
+          <div class="logo"><a href="index.html"></a></div>
+        </div>
+        <div class="etc_bar"></div>
+        <nav class="gnb">
+          <ul>
+            <li><a href="#none">카테고리</a></li>
+            <li><a href="#none">크리에이터</a></li>
+            <li><a href="#none">고객지원</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div id="hamburger"></div>
+    </header>
+    <menu>
+      <div class="inner">
+        <div id="menu_img"></div>
+        <dl data-title="img/header/category_img.jpg">
+          <dt>카테고리</dt>
+          <dd><a href="course.html">크리에이티브</a></dd>
+          <dd><a href="course.html">수익 창출</a></dd>
+          <dd><a href="course.html">직무</a></dd>
+          <dd><a href="course.html">외국어</a></dd>
+          <dd><a href="course.html">키즈</a></dd>
+        </dl>
+        <dl data-title="img/header/creator_center_img.jpg">
+          <dt>크리에이터</dt>
+          <dd>
+            <button>
+              <a href="creator_center.html">크리에이터 센터</a>
+            </button>
+          </dd>
+        </dl>
+        <dl data-title="img/header/suppor_img.jpg">
+          <dt>고객지원</dt>
+          <dd><a href="#none">자주 묻는 질문</a></dd>
+          <dd><a href="#none">고객센터</a></dd>
+          <dd><a href="#none">지원 기기 및 이용 환경</a></dd>
+        </dl>
+      </div>
+    </menu>
+    <aside id="res_menu" class="clicked">
+      <div class="upper_flex">
+        <img src="img/logo/Logo_border.png" alt="로고이미지" id="hbg_logo" />
+        <img src="img/header/closer.png" alt="닫기" id="closer" />
+      </div>
+      <div class="menu_main">
+        <h1 class="res_menu_title">카테고리</h1>
+        <img
+          src="img/header/categorizer.png"
+          alt="구분선"
+          class="categorizer"
+        />
+        <ul id="res_menu_category">
+          <li><a href="course.html">크리에이티브</a></li>
+          <li><a href="course.html">수익 창출</a></li>
+          <li><a href="course.html">직무</a></li>
+          <li><a href="course.html">외국어</a></li>
+          <li><a href="course.html">키즈</a></li>
+        </ul>
+        <ul class="cate_dots">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <a href="#none" id="all_class">
+          <button>강의 전체보기</button>
+        </a>
+        <div class="btn_flex">
+          <a href="#none"
+            ><button>
+              크리에이터 센터<img
+                src="img/new_window.png"
+                alt="새 창에서 열기"
+                class="res_new"
+              /></button
+          ></a>
+          <a href="creator_center.html"
+            ><button>
+              고객센터<img
+                src="img/new_window.png"
+                alt="새 창에서 열기"
+                class="res_new"
+              /></button
+          ></a>
+        </div>
+      </div>
+    </aside>
+    <!-- Main -->
+    <main>
+      <!-- Page Title -->
+      <div class="page_title">
+        <div class="title_box">
+          <h1>크리에이터 센터</h1>
+          <h4>세상 모두가 사랑하는 일을 하며 살 수 있도록</h4>
+        </div>
+      </div>
+      <!-- Main Content -->
+      <section class="content_space">
+        <div class="inner">
+          <!-- Main Visual -->
+          <section class="main_visual">
+            <!-- Left Side -->
+            <article class="main_lefter">
+              <select name="main_select" id="earning">
+                <option name="earning" value="all_of_it">전체</option>
+                <option name="earning" value="creative">크리에이티브</option>
+                <option name="earning" value="make_money">수익 창출</option>
+                <option name="earning" value="work_out">직무</option>
+                <option name="earning" value="foreign">외국어</option>
+                <option name="earning" value="for_kids">키즈</option>
+              </select>
+              <p>클래스들은 첫 달 평균</p>
+              <span id="earn_money">원</span>
+              <span>을 정산 받아요</span>
+              <button>
+                <a href="creator_center.html">크리에이터 시작하기</a>
+              </button>
+            </article>
+            <!-- Right Side -->
+            <article class="main_righter">
+              <div class="main_slider_wrap">
+                <div class="main_slider downer">
+                  <div class="main_slider_wrapper">
+                    <ul class="main_moving_target">
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="main_slider upper">
+                  <div class="main_slider_wrapper upper">
+                    <ul class="main_moving_target upper">
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="main_slider downer">
+                  <div class="main_slider_wrapper">
+                    <ul class="main_moving_target">
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <!-- Creator Bar -->
+          <div class="creator_bar">
+            <div class="creator_wrap">
+              <div class="creator_lefter">
+                <p>클래스 101과 함께</p>
+                <p>누군가의 별이 되어주세요!</p>
+              </div>
+              <div class="creator_righter">
+                <ul class="creator_righter_flex">
+                  <li>
+                    <span>누적 크리에이터 정산액</span>
+                    <p>430억 원</p>
+                  </li>
+                  <li>
+                    <span>크리에이터 평균 정산액</span>
+                    <p>2,000만 원</p>
+                  </li>
+                  <li>
+                    <span>만나게 될 수강생 수</span>
+                    <p>230만 명+</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Creator Swiper -->
+          <section class="swipe_area">
+            <!-- Swiper -->
+            <div class="swiper creator_swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="slide_desc_wrap">
+                    <img src="img/creator_center/teacher_words_1.png" alt="" />
+                    <div class="title_and_desc">
+                      <p class="silder_desc">허파까지 따듯해지는 감동실화</p>
+                      <p class="teacher_name">김준표</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slide_desc_wrap">
+                    <img src="img/creator_center/teacher_words_2.jpg" alt="" />
+                    <div class="title_and_desc">
+                      <p class="silder_desc">종잇장도 따듯해지는 트루스토리</p>
+                      <p class="teacher_name">Ekirona</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slide_desc_wrap">
+                    <img src="img/creator_center/teacher_words_3.jpg" alt="" />
+                    <div class="title_and_desc">
+                      <p class="silder_desc">
+                        옆의 구조물도 따듯해지는 충격실화
+                      </p>
+                      <p class="teacher_name">Shikisai</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slide_desc_wrap">
+                    <img src="img/creator_center/teacher_words_4.png" alt="" />
+                    <div class="title_and_desc">
+                      <p class="silder_desc">보드게임도 눅눅해지는 반전실화</p>
+                      <p class="teacher_name">김건희(Gary)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slide_desc_wrap">
+                    <img src="img/creator_center/teacher_words_5.jpg" alt="" />
+                    <div class="title_and_desc">
+                      <p class="silder_desc">
+                        키보드도 이물질이 들어가는 쇼킹스토리
+                      </p>
+                      <p class="teacher_name">마니랜드</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+              <div class="autoplay-progress">
+                <svg viewBox="0 0 48 48">
+                  <circle cx="24" cy="24" r="20"></circle>
+                </svg>
+                <span></span>
+              </div>
+            </div>
+          </section>
+          <!-- Starter Area -->
+          <section class="starter_area">
+            <h1>원하는 상품으로 시작해보세요!</h1>
+            <div class="desc_for_starter">
+              <img src="img/creator_center/courses.png" alt="starter_img" />
+              <article>
+                <p class="starter_title">정규 클래스</p>
+                <p class="starter_desc">
+                  단계별 커리큘럼으로 이론부터<br />
+                  기초, 깊이 있는 내용까지 담아낼 수 있어요.
+                </p>
+              </article>
+            </div>
+            <div class="desc_for_starter">
+              <article>
+                <p class="starter_title">디지털 파일</p>
+                <p class="starter_desc">
+                  혼자만 가지고 있기 아까운 도안, 브러시, 템플릿 등 <br />다양한
+                  파일도 판매해 보세요.
+                </p>
+              </article>
+              <img src="img/creator_center/files.png" alt="starter_img" />
+            </div>
+            <div class="desc_for_starter">
+              <img src="img/creator_center/ebooks.png" alt="starter_img" />
+              <article>
+                <p class="starter_title">전자책</p>
+                <p class="starter_desc">
+                  영상 촬영, 편집 과정 없이 <br />PDF 파일로 쉽고 빠르게 상품
+                  등록이 가능해요.
+                </p>
+              </article>
+            </div>
+            <button>
+              <a href="creator_center.html">3초 만에 크리에이터 시작하기</a>
+            </button>
+          </section>
+          <!-- Ready For Creator -->
+          <section class="ready_for_creator">
+            <h1>모든 고민에 대한 해답이 준비돼 있어요</h1>
+            <ul>
+              <li>
+                <div class="ready_desc">
+                  <p class="ready_title">SNS 광고 무료 집행</p>
+                  <p class="ready_point">
+                    클래스 홍보, 어떻게 해야 할지 막막하신가요?<br />
+                    페이스북, 인스타그램 유튜브 등<br />
+                    다양한 매체의 광고를 무료로 집행해드려요.
+                  </p>
+                </div>
+                <img
+                  src="img/creator_center/snsad.png"
+                  alt=""
+                  class="ready_pic"
+                />
+              </li>
+              <li>
+                <img
+                  src="img/creator_center/pdmd.png"
+                  alt=""
+                  class="ready_pic"
+                />
+                <div class="ready_desc">
+                  <p class="ready_title">콘텐츠 전문 MD, PD</p>
+                  <p class="ready_point">
+                    클래스메이트의 반응을 이끌어내는 성공적인 클래스를 위해<br />
+                    디테일하게 컨설팅해드려요.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="ready_desc">
+                  <p class="ready_title">강의 영상 촬영, 편집</p>
+                  <p class="ready_point">
+                    크리에이터분들이 오롯이 강의에 집중할 수 있도록<br />
+                    강의의 촬영 및 편집을 도와드려요.
+                  </p>
+                </div>
+                <img
+                  src="img/creator_center/movie.png"
+                  alt=""
+                  class="ready_pic"
+                />
+              </li>
+              <li class="appearing_target">
+                <img
+                  src="img/creator_center/template.png"
+                  alt=""
+                  class="ready_pic"
+                />
+                <div class="ready_desc">
+                  <p class="ready_title">제작 메뉴얼과 템플릿 제공</p>
+                  <p class="ready_point">
+                    처음이더라도 쉽고 간편하게 상품을 등록할 수 있도록,
+                    <br />제작 메뉴얼과 템플릿을 제공해드려요.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <img
+                  src="img/creator_center/advise.png"
+                  alt=""
+                  class="ready_pic"
+                />
+                <div class="ready_desc">
+                  <p class="ready_title">
+                    선배 크리에이터들의 클래스 홍보 팁까지!
+                  </p>
+                  <p class="ready_point">
+                    예비/신규 크리에이터들이 참고할 수 있는 <br />셀프 브랜드,
+                    마케팅 영상 클래스를 제공해드려요.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <!-- FAQ -->
+          <section class="faq">
+            <h1>자주 묻는 질문</h1>
+            <ul>
+              <li>
+                <div class="faq_title">Q.어떤 클래스를 개설할 수 있나요?</div>
+                <div class="faq_desc">
+                  <p>
+                    클래스101에서는 취미부터 직무, 부업까지 다양한 카테고리의
+                    온라인 클래스와 상품들이 오픈되고 있어요. <br />다양한
+                    유형의 상품을 여러 개 개설할 수도 있답니다. <br />클래스의
+                    경우, 여러 개의 영상이 커리큘럼을 구성하는 형태의 정규
+                    클래스를 개설하실 수 있습니다.<br />
+                    클래스 외에도 노하우를 담은 PDF 형태의 전자책이나 프리셋,
+                    템플릿, 도안 등의 디지털 파일을 개설하실 수 있어요.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="faq_title">
+                  Q.상품을 개설하는 데에 비용이 드나요?
+                </div>
+                <div class="faq_desc">
+                  <p>
+                    클래스101에서 만날 수 있는 모든 유형의 클래스와 전자책
+                    개설은 무료입니다. <br />판매가 시작된 이후, 수수료는 판매
+                    금액에 따라 일정 비율로 부과되고 있어요. <br />상품이
+                    판매되지 않는 경우에도 별도로 지불하셔야 하는 수수료는
+                    없어요!
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="faq_title">
+                  Q.사업자로 등록해야 판매가 가능한가요?
+                </div>
+                <div class="faq_desc">
+                  <p>
+                    사업자가 없으셔도 상품의 개설 및 판매가 가능합니다.
+                    <br />단, 크리에이터님께서 클래스와 함께 직접 준비물 키트를
+                    배송하고자 하시는 경우에는 사업자등록증이 필요해요.
+                    <br />또한 준비물의 종류에 따라 적절한 허가증이 필요할 수
+                    있어요.<br />클래스101에서는 취미부터 직무, 부업까지 다양한
+                    카테고리의 온라인 클래스와 상품들이 오픈되고 있어요.
+                    <br />다양한 유형의 상품을 여러 개 개설할 수도 있답니다.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="faq_title">Q.클래스를 어떻게 홍보할 수 있나요?</div>
+                <div class="faq_desc">
+                  <p>
+                    클래스101에서는 판매 중인 상품을 예비 수강생에게 알리기 위해
+                    홍보를 다양한 곳에서 진행하고 있어요. <br />내 상품을 좋아할
+                    만한 수강생에 대한 크리에이터님의 노하우를 바탕으로 SNS,
+                    커뮤니티에서 홍보를 해주시면 더 효과적으로 나의 상품을 알릴
+                    수 있어요. <br />자세한 홍보 방법이 궁금하다면?<br /><br />
+                    <a href="#none"> 성공 크리에이터의 노하우 바로가기 </a>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <div class="footer_upper">
+        <div class="inner">
+          <ul>
+            <li><a href="#none">개인정보 처리방침</a></li>
+            <li><a href="#none">이용약관</a></li>
+            <li><a href="#none">제휴 및 대외협력</a></li>
+            <li><a href="#none">환불 정책</a></li>
+            <li><a href="#none">사업자 정보 확인</a></li>
+            <li><a href="#none">지적재산관 침해 신고 센터</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer_lower">
+        <div class="inner">
+          <div class="lower_left">
+            <img src="img/logo/Logo_border.png" alt="" class="footer_logo" />
+            <div class="footer_info">
+              <span>주식회사 클래스101</span>
+              <span>대표 공대선</span>
+              <span
+                >서울특별시 강남구 테헤란로 302, 1-11층, 13층(역삼동,
+                위워크타워)</span
+              >
+              <span>대표전화 : 1800-2109 </span>
+              <span>이메일 : ask@101.inc</span>
+              <span>사업자등록번호 : 457-81-00277</span>
+              <span>통신판매업신고 : 2022-서울강남-02525</span>
+              <span>클라우드 호스팅 : Amazon Web Services Korea LLC</span>
+            </div>
+            <p class="footer_caution">
+              클래스101은 통신판매중개자로서 중개하는 거래에 대하여 책임을
+              부담하지 않습니다.
+            </p>
+          </div>
+          <div class="lower_right">
+            <div class="subfooter">
+              <ul>
+                <li><a href="#none">공지사항</a></li>
+                <li><a href="#none">채용</a></li>
+                <li><a href="#none">국비지원</a></li>
+                <li class="none-border">
+                  <a href="#none">지원 기기 및 이용환경</a>
+                </li>
+                <li><a href="#none">클래스 개별 구매</a></li>
+                <li><a href="#none">기프트카드 및 캐시 이용약관</a></li>
+                <li><a href="#none">기업고객문의</a></li>
+                <li class="none-border"><a href="#none">101서랍(베타)</a></li>
+              </ul>
+            </div>
+            <div class="download_btn">
+              <a href="#none">
+                <img src="img/dwn_android.png" alt="DownLoad_ANDROID" />
+              </a>
+              <a href="#none">
+                <img src="img/dwn_apple.png" alt="DownLoad_IOS" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/creator_swiper.js"></script>
+    <!-- javaScript -->
+    <script src="js/common.js"></script>
+    <script src="js/creator_center.js"></script>
+    <script src="js/creator_main.js"></script>
+  </body>
+</html>

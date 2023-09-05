@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/* WebFont - GmarketSans */
+@font-face {
+  font-family: "GS_B";
+  src: url(font/GmarketSansTTFBold.ttf);
+}
+@font-face {
+  font-family: "GS_M";
+  src: url(font/GmarketSansTTFMedium.ttf);
+}
+@font-face {
+  font-family: "GS_L";
+  src: url(font/GmarketSansTTFLight.ttf);
+}
+/* CSS 변수 지정 */
+:root {
+  --black: #020715;
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "GS_B";
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+  list-style: none;
+}
+body {
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+button {
+  cursor: pointer;
+}
+
+.inner {
+  width: 100%;
+  padding: 0 200px;
+}
+@media screen and (max-width: 767px) {
+  .inner {
+    width: 100%;
+    margin: 0;
+    padding: 0 5px;
+  }
+}

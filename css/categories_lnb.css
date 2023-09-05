@@ -1,0 +1,140 @@
+@charset "UTF-8";
+.lnb {
+  margin-top: 100px;
+}
+.lnb > .inner {
+  padding: 0 350px;
+}
+.categories {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+}
+.categories > li {
+  width: 130px;
+  margin: auto;
+  position: relative;
+  cursor: pointer;
+}
+.categories > li > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.categories > li > img {
+  width: 100px;
+  height: 100px;
+  margin: 0 15px;
+}
+.categories > li > button {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 20;
+  width: 130px;
+  color: #fff3a6;
+  padding: 1rem;
+  border: 1px solid #fff3a6;
+  border-radius: 15px;
+  background-color: var(--black);
+  font-size: 1rem;
+}
+.lnb_menu {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 2rem);
+  z-index: 10;
+}
+.lnb_menu > ul {
+  width: 130px;
+  padding: 1rem 0 0;
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(3px);
+  border: 2px solid #fff3a6;
+  border-radius: 0 0 30px 30px;
+  overflow: hidden;
+  transition: 550ms;
+}
+.categories > li:first-child > .lnb_menu {
+  display: none;
+}
+.lnb_menu > ul > li > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0.5rem;
+  color: var(--black);
+  text-align: center;
+  font-size: 0.9rem;
+  transition: 350ms;
+}
+.lnb_menu > ul > li > a:hover {
+  background-color: #fff3a6;
+}
+.lnb_menu > ul > li:last-child > a {
+  border-radius: 0 0 30px 30px;
+}
+.lnb_menu > ul.downer {
+  animation-name: downer;
+  animation-duration: 550ms;
+  animation-fill-mode: forwards;
+}
+.lnb_menu > ul.upper {
+  animation-name: upper;
+  animation-duration: 550ms;
+  animation-fill-mode: forwards;
+}
+@keyframes downer {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: auto;
+    opacity: 1;
+  }
+}
+@keyframes upper {
+  from {
+    height: auto;
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .lnb {
+    margin-top: 20px;
+  }
+  .inner {
+    padding: 0 20px;
+  }
+  .lnb > .inner {
+    padding: 0 10px;
+  }
+  .lnb_menu {
+    display: none;
+  }
+  .categories {
+    display: grid;
+    grid-template-areas: ". . ." ". . .";
+    row-gap: 2.5rem;
+  }
+  .categories > li {
+    width: 33%;
+  }
+  .categories > li > img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  .categories > li > button {
+    width: 100px;
+    padding: 0.3rem;
+    transform: translateX(-30%);
+    font-size: 0.8rem;
+  }
+}

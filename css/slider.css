@@ -1,0 +1,94 @@
+.swiper {
+  width: 100%;
+  height: 100vh;
+}
+
+.swiper-slide {
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page > video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  z-index: -3;
+}
+#blackfilter {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(2, 7, 21, 0.1);
+  left: 0;
+  top: 0;
+  z-index: -2;
+}
+.swiper-pagination {
+  padding: 0 350px;
+  display: flex;
+  justify-content: space-between;
+}
+.swiper-pagination::after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: 20%;
+  top: 50%;
+  width: calc(100% - 750px);
+  height: 1px;
+  border-top: 0.5px solid #fff;
+}
+.swiper-pagination-bullet {
+  width: 90px !important;
+  height: 90px !important;
+  text-align: unset;
+  line-height: normal;
+  font-size: 0px;
+  color: transparent;
+  opacity: 1 !important;
+  background-color: transparent !important;
+  background-image: url("../img/bulleta/white_star.png") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+.swiper-pagination-bullet:nth-child(5) {
+  display: none !important;
+}
+.swiper-pagination-bullet-active {
+  color: transparent !important;
+  background: url("../img/bulleta/light_star.png") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+@media screen and (max-width: 767px) {
+  .swiper-pagination {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .page > video {
+    height: 100%;
+  }
+}
+.swiper,
+.swiper-wrapper {
+  background-color: var(--black);
+}

@@ -1,0 +1,60 @@
+@charset "UTF-8";
+.bulleta_wrap {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 3.7rem;
+  z-index: 30;
+}
+.bullet {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100vw - 700px);
+  height: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  transition: 650ms;
+  position: relative;
+}
+.bullet > .bulleta {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: -100%;
+}
+.bulleta:nth-child(1) {
+  left: -3%;
+}
+.bulleta:nth-child(2) {
+  left: 29%;
+}
+.bulleta:nth-child(3) {
+  left: 64%;
+}
+.bulleta:nth-child(4) {
+  left: 97%;
+}
+.bulleta > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+#bulleta_none {
+  display: none;
+}
+.bl_shot {
+  width: 90px;
+  height: 90px;
+  background-image: url(../img/bulleta/white_star.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: 550ms;
+}
+.bl_shot.on {
+  background-image: url(../img/bulleta/light_star.png);
+}
+@media screen and (max-width: 767px) {
+  .bullet {
+    display: none;
+  }
+}

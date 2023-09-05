@@ -1,0 +1,150 @@
+@charset "UTF-8";
+#footer {
+  width: 40vw;
+  height: 100vh;
+}
+#footer > video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 650ms;
+}
+#footer.swiper-slide-active > video {
+  top: 0;
+  left: -40vw;
+}
+footer {
+  margin-left: 60vw;
+  width: 40vw;
+  height: 100vh;
+  background-color: #020715;
+  padding: 1.5rem;
+}
+footer a {
+  color: white;
+}
+footer * {
+  color: white;
+}
+.footer_logo {
+  width: 25%;
+  margin: 1rem auto;
+}
+.footer_logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+.dwn_wrap {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 4rem;
+}
+.dwn_wrap > a {
+  display: inline-block;
+  width: 45%;
+}
+.dwn_wrap > a > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.contact {
+  margin-top: 2rem;
+  width: 100%;
+  height: auto;
+}
+.contact > ul {
+}
+.contact > ul > li {
+  font-family: "GS_L";
+  font-size: 0.7rem;
+  line-height: 1.2rem;
+}
+.legal_alarm {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: ". . ." ". . ." ". . .";
+  margin: 1rem 0;
+}
+.legal_alarm > a {
+  display: inline-block;
+  padding: 0.8rem 0.5rem;
+  border-right: 0.5px solid #fff;
+}
+.legal_alarm > a:nth-child(3),
+.legal_alarm > a:nth-child(6),
+.legal_alarm > a:nth-child(9) {
+  border: none;
+}
+.footer_notice,
+.footer_class_shop {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: ". . .";
+  margin: 3rem 0;
+}
+.footer_notice > a,
+.footer_class_shop > a {
+  display: inline-block;
+  padding: 0.8rem 0.5rem;
+  border-right: 0.5px solid #fff;
+}
+.footer_notice > a:nth-child(3),
+.footer_class_shop > a:nth-child(3) {
+  border: none;
+}
+.legal_alarm > a,
+.footer_notice > a,
+.footer_class_shop > a {
+  font-family: "GS_M";
+  font-size: 0.8rem;
+}
+@media screen and (max-width: 767px) {
+  #footer {
+    width: 100%;
+  }
+  footer {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 70px 0.5rem 0.5rem;
+  }
+  .footer_logo {
+    margin: 0 auto;
+  }
+  .legal_alarm {
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-areas: ". ." ". ." ". ." ". ." "protect protect";
+  }
+  .legal_alarm > a {
+    border: none;
+  }
+  .legal_alarm > a:nth-child(even) {
+    border-left: 0.5px solid #fff;
+  }
+  .legal_alarm > a:nth-child(9) {
+    grid-area: protect;
+    border-top: 0.5px solid #fff;
+    border-bottom: 0.5px solid #fff;
+  }
+
+  .dwn_wrap {
+    padding: 1rem;
+  }
+  .footer_notice,
+  .footer_class_shop {
+    margin: 0 0.5rem;
+  }
+  .legal_alarm > a,
+  .footer_notice > a,
+  .footer_class_shop > a {
+    font-size: 0.6rem;
+  }
+  .contact {
+    margin: 0;
+  }
+}

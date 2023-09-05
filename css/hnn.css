@@ -1,0 +1,320 @@
+@charset "UTF-8";
+#hot_and_new {
+  padding-top: 120px;
+  position: relative;
+}
+#hnn_bg {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+.hnn_flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4.5rem;
+}
+.hnn_flex * {
+  color: white;
+}
+.hot_slider_wrapper,
+.new_slider_wrapper {
+  position: relative;
+  width: calc(185 * 5px);
+}
+.hot_slider_wrapper > p,
+.new_slider_wrapper > p {
+  padding: 0.3rem 3rem;
+  font-size: 2rem;
+}
+.hot_slider_wrapper > p {
+  text-align: left;
+}
+.new_slider_wrapper > p {
+  text-align: right;
+}
+/* Hot And New Left */
+.hnn_left {
+  width: 50vw;
+  height: 600px;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  opacity: 0;
+  transition: 650ms;
+  background-color: rgba(2, 7, 21, 0.5);
+  backdrop-filter: blur(3px);
+  box-shadow: inset 0 0 3px 2px rgba(255, 255, 255, 0.5);
+}
+.hnn_title_for_slide {
+  grid-area: title;
+}
+.hnn_left > h1 {
+  font-family: "GS_M";
+  margin-top: 1.5rem;
+  font-size: 2rem;
+}
+.hot_slider_wrapper {
+  opacity: 0;
+}
+#hot_slider,
+#new_slider {
+  display: grid;
+  grid-template-areas: "title title title title title title title title title title title title title title title title title title title title" ". . . . . . . . . . . . . . . . . . . . ";
+}
+.new_slider_wrapper {
+  margin: 3rem 0;
+  opacity: 0;
+}
+/* Hot And New Right */
+.hnn_moreover {
+  width: 500px;
+  height: 600px;
+  padding: 1rem 0.7rem;
+  border: 0.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  margin: auto;
+  overflow: hidden;
+  background-color: rgba(2, 7, 21, 0.5);
+  backdrop-filter: blur(3px);
+  box-shadow: inset 0 0 3px 2px rgba(255, 255, 255, 0.5);
+}
+.subtitle {
+  display: flex;
+  justify-content: space-between;
+  height: 3rem;
+}
+.subtitle > p {
+  margin-left: 1rem;
+  font-size: 1.3rem;
+  line-height: 3rem;
+  text-align: center;
+}
+.subtitle > button {
+  color: #020715;
+  padding: 0.5rem 2rem;
+  border: 1px solid #020715;
+  border-radius: 10px;
+  margin-right: 1rem;
+  outline: none;
+  background-color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: 550ms;
+  cursor: pointer;
+}
+.subtitle > button:hover {
+  color: #fff6a5;
+  border: 1px solid #fff6a5;
+  background-color: #020715;
+}
+.hnn_desc_wrapper {
+  margin: 1rem 0 1rem;
+}
+.hnn_desc_content {
+  position: relative;
+  width: 90%;
+  height: 150px;
+  border: 0.5px solid #fff;
+  margin: 1.3rem 0;
+  overflow: hidden;
+  border-radius: 30px;
+}
+.hnn_desc_right {
+  margin-left: auto;
+}
+.hnn_desc_content::after {
+  content: "강의 슬라이드";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 3rem;
+  line-height: 3rem;
+  border: 0.5px solid rgba(255, 255, 255, 0.75);
+  border-radius: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(2, 7, 21, 0.75);
+  transform: translate(-50%, -50%);
+}
+.hnn_desc_content:nth-child(1):after {
+  content: "매일매일 새로운 강의!";
+}
+.hnn_desc_content:nth-child(2):after {
+  content: "화제의 인기 강의!";
+}
+.hnn_desc_content:nth-child(3):after {
+  content: "색다른 이색 강의!";
+}
+.hnn_desc_content > ul {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.hnn_desc_content > ul > li {
+  width: auto;
+  height: 100%;
+}
+.hnn_desc_content > ul > li > a {
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+}
+.hnn_desc_content > ul > li > a > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+#hot_and_new.swiper-slide-active .hnn_left {
+  animation-name: hnn_fade;
+  animation-duration: 650ms;
+  animation-fill-mode: forwards;
+  animation-delay: 650ms;
+}
+#hot_and_new.swiper-slide-active .hnn_left .hot_slider_wrapper {
+  animation-name: hnn_fade_left;
+  animation-duration: 650ms;
+  animation-fill-mode: forwards;
+  animation-delay: 1150ms;
+}
+#hot_and_new.swiper-slide-active .hnn_left .new_slider_wrapper {
+  animation-name: hnn_fade_right;
+  animation-duration: 650ms;
+  animation-fill-mode: forwards;
+  animation-delay: 1550ms;
+}
+.hnn_right {
+  opacity: 0;
+  transition: 650ms;
+}
+#hot_and_new.swiper-slide-active .hnn_right {
+  animation-name: hnn_fade;
+  animation-duration: 650ms;
+  animation-fill-mode: forwards;
+  animation-delay: 2000ms;
+}
+@keyframes hnn_fade {
+  0% {
+    opacity: 0;
+    transform: transLateY(30%);
+  }
+  100% {
+    opacity: 1;
+    transform: transLateY(0%);
+  }
+}
+@keyframes hnn_fade_left {
+  0% {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes hnn_fade_right {
+  0% {
+    opacity: 0;
+    transform: translateX(30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+#hot_slider {
+  transform: translateX(-1850px);
+}
+#new_slider {
+  transform: translateX(0px);
+}
+.new_slider_wrapper,
+.hot_slider_wrapper {
+  width: 100%;
+  height: 25%;
+  margin: 3rem 0;
+  overflow: hidden;
+}
+.new_slider_wrapper > ul,
+.hot_slider_wrapper > ul {
+  justify-content: flex-start;
+  width: 400%;
+  height: 100%;
+}
+.new_slider_wrapper > ul > li,
+.hot_slider_wrapper > ul > li {
+  display: inline-block;
+  width: 185px;
+  height: 15vh;
+}
+.new_slider_wrapper > ul > li > a,
+.hot_slider_wrapper > ul > li > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.new_slider_wrapper > ul > li > a > img,
+.hot_slider_wrapper > ul > li > a > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+@media screen and (max-width: 767px) {
+  #hnn_bg {
+    height: 100%;
+  }
+  #hot_and_new {
+    padding: 0;
+  }
+  .hnn_flex {
+    flex-direction: column;
+    margin-top: 0;
+    margin-top: 7rem;
+  }
+  .hnn_left {
+    width: 100%;
+    height: calc(100% + 30px);
+  }
+  .hnn_left > h1 {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  .hot_slider_wrapper > p,
+  .new_slider_wrapper > p {
+    font-size: 1.1rem;
+    font-family: "GS_M";
+  }
+  .hnn_moreover {
+    width: 100%;
+    height: 8rem;
+    padding: 5px;
+    margin: 4rem 5px 0;
+    border: none;
+  }
+  .subtitle {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 10rem;
+  }
+  .subtitle > p {
+    margin: 0.5rem 0 0;
+  }
+  .subtitle > button {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .hnn_desc_content {
+    display: none;
+  }
+}
